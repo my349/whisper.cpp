@@ -17,4 +17,7 @@ RUN apt-get update && \
 
 COPY --from=build /app /app
 ENV PATH=/app/build/bin:$PATH
+
+EXPOSE 8000/tcp
+
 ENTRYPOINT [ "whisper-server" ]
