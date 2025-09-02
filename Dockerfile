@@ -20,4 +20,4 @@ ENV PATH=/app/build/bin:$PATH
 
 EXPOSE 8000/tcp
 
-ENTRYPOINT [ "whisper-server" ]
+ENTRYPOINT [ "whisper-server", "--host", "::", "--port", "8000" ]
